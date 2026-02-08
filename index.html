@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Chronic Pain Relief | Beyond the Adjustment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e6b8c;
+            --primary-light: rgba(30, 107, 140, 0.08);
+            --secondary: #4c9c7c;
+            --secondary-light: rgba(76, 156, 124, 0.08);
+            --accent: #d46b1d;
+            --accent-light: rgba(212, 107, 29, 0.08);
+            --dark: #1a1a1a;
+            --gray: #555;
+            --gray-light: #f8f9fa;
+            --light: #ffffff;
+            --border: #e0e0e0;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 0 40px;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-light) 100%);
+            border-radius: var(--radius);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-weight: 500;
+        }
+
+        /* Comparison Banner */
+        .comparison-banner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-banner {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .approach-card {
+            padding: 30px;
+            border-radius: var(--radius);
+            background-color: var(--light);
+            border: 2px solid;
+            transition: var(--transition);
+        }
+
+        .traditional-approach {
+            border-color: #ddd;
+        }
+
+        .integrated-approach {
+            border-color: var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .integrated-approach::before {
+            content: 'RECOMMENDED';
+            position: absolute;
+            top: 15px;
+            right: -35px;
+            background-color: var(--accent);
+            color: white;
+            padding: 8px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .approach-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .approach-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .traditional-approach .approach-title {
+            color: var(--gray);
+        }
+
+        .integrated-approach .approach-title {
+            color: var(--primary);
+        }
+
+        .approach-list {
+            text-align: left;
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .approach-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .traditional-approach .approach-list li::before {
+            content: '○';
+            position: absolute;
+            left: 0;
+            color: #bbb;
+            font-weight: bold;
+        }
+
+        .integrated-approach .approach-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Integrated Components */
+        .components-section {
+            margin: 60px 0;
+        }
+
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .component-card {
+            padding: 35px;
+            border-radius: var(--radius);
+            background-color: var(--light);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .component-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .component-card.chiropractic::before {
+            background-color: var(--primary);
+        }
+
+        .component-card.rehab::before {
+            background-color: var(--secondary);
+        }
+
+        .component-card.soft-tissue::before {
+            background-color: var(--accent);
+        }
+
+        .component-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .component-card:hover::before {
+            width: 8px;
+        }
+
+        .component-icon {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chiropractic .component-icon {
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .rehab .component-icon {
+            background-color: var(--secondary-light);
+            color: var(--secondary);
+        }
+
+        .soft-tissue .component-icon {
+            background-color: var(--accent-light);
+            color: var(--accent);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin: 40px 0 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* Process Section */
+        .process-section {
+            background-color: var(--gray-light);
+            padding: 50px;
+            border-radius: var(--radius);
+            margin: 60px 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .process-step {
+            padding: 30px;
+            border-radius: var(--radius);
+            background-color: var(--light);
+            text-align: center;
+            border: 2px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+        }
+
+        /* Value Proposition */
+        .value-section {
+            margin: 50px 0;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .value-card {
+            padding: 30px;
+            border-radius: var(--radius);
+            background-color: var(--light);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+            box-shadow: var(--shadow);
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .value-title {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Resources */
+        .resources {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+            padding: 50px;
+            border-radius: var(--radius);
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .resource-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 35px;
+            background-color: white;
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            box-shadow: var(--shadow);
+        }
+
+        .resource-link:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .resource-link.clinic {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .resource-link.clinic:hover {
+            background-color: white;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .resource-link.github {
+            background-color: var(--dark);
+            color: white;
+        }
+
+        .resource-link.github:hover {
+            background-color: white;
+            color: var(--dark);
+            border-color: var(--dark);
+        }
+
+        .resource-link.google {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .resource-link.google:hover {
+            background-color: white;
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: var(--gray);
+            border-top: 1px solid var(--border);
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .integrated-approach::before {
+                font-size: 0.7rem;
+                right: -40px;
+                padding: 6px 35px;
+            }
+
+            .components-grid, .process-steps, .value-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-section {
+                padding: 30px;
+            }
+
+            .resources {
+                padding: 30px;
+            }
+
+            .resource-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .resource-link {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .component-card, .process-step, .value-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header fade-in">
+            <h1>Beyond the Adjustment</h1>
+            <p class="subtitle">A Look Inside Our Integrated Approach to Chronic Pain Relief & Why Comprehensive Care Creates Lasting Change</p>
+        </header>
+
+        <section class="fade-in" style="animation-delay: 0.1s;">
+            <p>Chronic pain is rarely the result of a single issue—it's typically a complex combination of structural misalignment, muscular imbalance, movement dysfunction, and tissue damage. That's why temporary relief from isolated treatments often fails to provide lasting solutions. Our integrated approach addresses pain at every level, combining specialized therapies to create synergistic healing that goes far beyond what any single treatment could achieve alone.</p>
+        </section>
+
+        <section class="fade-in" style="animation-delay: 0.2s;">
+            <h2>The Difference: Traditional vs. Integrated Care</h2>
+            <p>Understanding these fundamental differences explains why comprehensive treatment plans yield superior, long-lasting results:</p>
+
+            <div class="comparison-banner">
+                <div class="approach-card traditional-approach">
+                    <h3 class="approach-title">Traditional "Crack-and-Go"</h3>
+                    <ul class="approach-list">
+                        <li>Focuses only on spinal alignment</li>
+                        <li>Passive patient experience</li>
+                        <li>Short-term symptom relief</li>
+                        <li>One-size-fits-all approach</li>
+                        <li>Limited follow-up or progression</li>
+                        <li>Doesn't address root causes</li>
+                    </ul>
+                    <p style="color: var(--gray); font-size: 0.95rem;"><strong>Result:</strong> Temporary relief requiring repeated visits without lasting improvement.</p>
+                </div>
+
+                <div class="approach-card integrated-approach">
+                    <h3 class="approach-title">Our Integrated Approach</h3>
+                    <ul class="approach-list">
+                        <li>Addresses alignment, movement & tissue health</li>
+                        <li>Active patient participation in healing</li>
+                        <li>Long-term functional improvement</li>
+                        <li>Personalized treatment plans</li>
+                        <li>Progressive rehabilitation</li>
+                        <li>Treats underlying causes, not just symptoms</li>
+                    </ul>
+                    <p style="color: var(--primary); font-weight: 600; font-size: 0.95rem;"><strong>Result:</strong> Lasting pain relief with improved function and reduced recurrence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="components-section fade-in" style="animation-delay: 0.3s;">
+            <h2>The Three Pillars of Our Integrated Approach</h2>
+            <p>Each component plays a specific role in your recovery, working together to create comprehensive healing:</p>
+
+            <div class="components-grid">
+                <div class="component-card chiropractic">
+                    <div class="component-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Precision Chiropractic Care</h3>
+                    <p>Evidence-based adjustments restore proper spinal alignment and joint function, reducing nerve irritation and improving biomechanics. We use specific, gentle techniques tailored to your unique spinal needs rather than generic manipulations.</p>
+                    <p><strong>Primary Benefits:</strong> Pain reduction, improved mobility, better nervous system function, proper posture restoration.</p>
+                </div>
+
+                <div class="component-card rehab">
+                    <div class="component-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Active Rehabilitation Exercises</h3>
+                    <p>Customized exercise programs rebuild strength, stability, and proper movement patterns. We progress you through phases from basic stability to functional strength, ensuring your body can maintain the improvements achieved through adjustments.</p>
+                    <p><strong>Primary Benefits:</strong> Lasting stability, injury prevention, improved function, empowered self-care, strength restoration.</p>
+                </div>
+
+                <div class="component-card soft-tissue">
+                    <div class="component-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3>Advanced Soft Tissue Therapy</h3>
+                    <p>Our Graston Technique® and other manual therapies break down scar tissue, improve circulation, and restore proper muscle function. This addresses the muscular component of pain that adjustments alone cannot resolve.</p>
+                    <p><strong>Primary Benefits:</strong> Reduced muscle tension, improved flexibility, scar tissue breakdown, enhanced healing response.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="process-section fade-in" style="animation-delay: 0.4s;">
+            <h2 style="text-align: center; border-bottom: none;">Your Personalized Treatment Journey</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Every patient follows a structured progression designed to achieve and maintain optimal results:</p>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 style="font-size: 1.4rem;">Comprehensive Assessment</h3>
+                    <p>Detailed evaluation including posture analysis, movement assessment, and diagnostic testing to identify all contributing factors to your pain.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 style="font-size: 1.4rem;">Pain Relief Phase</h3>
+                    <p>Combined therapies reduce inflammation, alleviate pain, and restore basic function. Typically includes more frequent chiropractic and soft tissue treatments.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 style="font-size: 1.4rem;">Rehabilitation Phase</h3>
+                    <p>Focus shifts to rebuilding strength and stability through progressive exercises while continuing supportive care to maintain alignment gains.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 style="font-size: 1.4rem;">Maintenance & Prevention</h3>
+                    <p>Transition to self-management with periodic check-ins to maintain results and prevent recurrence, focusing on lifestyle integration.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="value-section fade-in" style="animation-delay: 0.5s;">
+            <h2>Why "Premier Clinic" Means Better Outcomes</h2>
+            <p>Our integrated approach represents a higher standard of care that delivers measurable advantages:</p>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="value-title">Faster, Lasting Results</h3>
+                    <p>Combined therapies create synergistic effects, accelerating healing and creating more durable outcomes than single-modality approaches.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="value-title">Expert Collaboration</h3>
+                    <p>Our chiropractors and therapists coordinate your care, ensuring all treatments work together toward your specific goals.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="value-title">Patient Education</h3>
+                    <p>We empower you with knowledge about your condition and self-care strategies, making you an active participant in your recovery.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="value-title">Injury Prevention</h3>
+                    <p>By addressing underlying causes and building resilience, we reduce your risk of future injuries and pain recurrence.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="resources fade-in" style="animation-delay: 0.6s;">
+            <h3 style="color: var(--dark); margin-bottom: 20px;">Ready for a Different Kind of Care?</h3>
+            <p style="color: var(--gray); max-width: 800px; margin: 0 auto;">Experience the difference that integrated, comprehensive treatment can make for your chronic pain.</p>
+
+            <div class="resource-links">
+                <a href="https://www.rehablabwi.com/" class="resource-link clinic" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> Chiropractor Near me
+                </a>
+
+                <a href="https://matrixdestinynet.github.io/The-Spine-Sedentary-Connection/" class="resource-link github" target="_blank">
+                    <i class="fab fa-github"></i> Github resources
+                </a>
+
+                <a href="https://maps.app.goo.gl/VkW2gyGkPxfVUUHY8" class="resource-link google" target="_blank">
+                    <i class="fas fa-directions"></i> find us
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer fade-in" style="animation-delay: 0.7s;">
+            <p>© 2023 Integrated Pain Relief Clinic. True healing addresses the whole person, not just isolated symptoms.</p>
+            <p style="margin-top: 15px;">This information is for educational purposes. Consult healthcare professionals for personalized diagnosis and treatment plans.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Animation trigger
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            // Trigger animations with staggered delays
+            fadeElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+
+            // Add interaction to component cards
+            const componentCards = document.querySelectorAll('.component-card');
+            componentCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-12px)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+            });
+
+            // Add interaction to approach cards
+            const approachCards = document.querySelectorAll('.approach-card');
+            approachCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
